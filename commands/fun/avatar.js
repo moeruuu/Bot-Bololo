@@ -15,8 +15,12 @@ module.exports.data = {
     contexts: [0, 1, 2],
 }
 
+const { EmbedBuilder } = require('discord.js');
 module.exports.execute = async (interaction) => {
-    const user = interaction.options.getUser("user") || interaction.user
-    interaction.reply(user.displayAvatarURL({size: 1024}));
-    return;
+    const user = interaction.options.getUser("user") || interaction.user;
+    const embed = new EmbedBuilder()
+        .setTitle(`Avatar của con đũy ${user.username} xấu ỉa`)
+        .setImage(user.displayAvatarURL({ size: 1024 }))
+        .setColor('#0099ff');
+    await interaction.reply({ embeds: [embed] });
 }

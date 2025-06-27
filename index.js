@@ -71,12 +71,34 @@ client.on(Events.MessageCreate, async message => {
 
     const responses = {  
         'i love you': 'biến liền cho mẹ',
-        'vh': 'đôi mình chuột sấm sex'
+        'vh': 'đôi mình chuột sấm sex',
+		'cel': 'đồ chơi thõa mãn',
+		'mie':'đội 2 nón bảo hiểm kệ mẹ kao',
+		'iu': 'tôi yêu jungcook',
+		'identity v': 'game bệnh hoạn',
+		'gem': 'suốt ngày gem, đéo lo học',
+		'hl': 'gái mẹ m',
+		'học': 'Chị không muốn nói đâu, nhưng mà tụi em làm chị buồn cười ghê. @Phát Vĩnh à, em tưởng em là ai? Một đứa chuyên copy tính cách người khác, sống ảo đến mức quên cả mình là ai mà cũng bày đặt lên giọng đạo lý? Ngày trước chị thấy em dễ thương, giờ nhìn em là thấy một tập hợp của toàn những mảnh vá từ người khác, không có gì là bản gốc. Rồi tới em, @uchiha sasusu. Trên mạng thì như thiên thần, ngoài đời thì đúng là "thánh diễn". Nói xấu bạn sau lưng rồi quay lại ôm vai bá cổ cười như chưa có chuyện gì. Em sống như vậy được bao lâu nữa? Em nghĩ lòng tin của người khác là đồ chơi chắc? Nhìn lại xem, bao nhiêu người từng tốt với em, giờ họ ở đâu rồi? Hay là họ đã nhận ra mặt thật của em? @Hy Lam  – cái tên nghe như bước ra từ phim Marvel nhưng hành xử thì y như vai phản diện rẻ tiền. Đừng nghĩ mình cool ngầu khi đứng giữa drama mà nói “Tôi không liên quan”. Người không liên quan không phải là người im lặng khi thấy bất công, mà là người không góp phần tạo ra nó. Em chọn đứng ngoài, nhưng thật ra em là đứa ném đá rồi giấu tay đầu tiên. Còn @Lô Tô – em là đỉnh cao của sự “hiền giả tạo”. Ngoài mặt thì lúc nào cũng "mình không muốn xen vào chuyện người khác", nhưng sau lưng thì tin nhắn em gửi đi còn nhiều hơn status trên tường Facebook. Chị phục em thật, vừa có tài hai mặt, vừa có duyên khiến người ta tin em là nạn nhân. Nhưng em ơi, đừng nghĩ ai cũng mù. Chị đã im lặng lâu rồi, nhưng không có nghĩa là chị mù quáng. Một khi đã đủ thất vọng, thì người hiền nhất cũng biết nói. Tụi em diễn hay thật, nhưng diễn mãi cũng sẽ đến lúc khán giả ném dép. Người ta có thể tha thứ cho sự dại dột, chứ không tha thứ cho sự giả tạo có đầu tư. Nên từ nay, đừng nhắn tin hỏi “Sao chị lạnh nhạt?”, “Sao chị không chơi với tụi em nữa?”, “Sao chị lạ quá vậy?” — tụi em biết lý do mà. Lạ là vì chị không còn ngu như trước. Lạnh là vì chị đã đóng băng mọi cảm xúc dành cho những người chỉ biết yêu bản thân mình. Và không chơi nữa là vì, chị học được bài học lớn nhất.',
+		'cl': 'học ngu thích bú cu tài phiệt',
+		'doctor':'Mấy con đũy doctor chơi như l',
+		'gacha': 'Dính vào là dở rồi',
+
+		
     };
 
 	if (message.mentions.has(client.user)) {
         try {
-            await message.channel.send('Gọi cái loz, đang bận'); 
+			const mention_responses = [
+            'Gọi cái loz, đang bận ngắm múi zai rồi',
+            'Biến cho mẹ',
+			'Chỉ có công chúa Susu mới được gọi tao',
+			'Phuyền quá nha con đũy',
+			'G-Gọi tui chi dzạ? B-Baka!!!',
+			'Kick ra server bây giờ',
+			'Cho tui đồ chơi thõa mãn ddiii ~'
+        	];
+			const randomResponse = mention_responses[Math.floor(Math.random() * mention_responses.length)];
+            await message.channel.send(randomResponse); 
         } catch (error) {
             console.error('Error sending message:', error);
         }
