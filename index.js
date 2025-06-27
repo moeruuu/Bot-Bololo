@@ -1,7 +1,26 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require('discord.js');
+const express = require('express');
 require('dotenv').config();
+
+// Tạo Express server
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.json({
+        status: 'Bot đang chạy!',
+        bot_name: 'Súc Vật',
+        uptime: Math.floor(process.uptime()) + ' giây',
+        commands: ['avatar', 'ping', 'bll_random'],
+        message: 'Discord bot đang hoạt động bình thường'
+    });
+});
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Web server chạy trên port ${PORT}`);
+});
 
 // Create a new client instance
 const client = new Client({ 
