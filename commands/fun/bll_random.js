@@ -26,7 +26,7 @@ module.exports.execute = async (interaction) => {
                     content: 'Á à, con đĩ nào nè',
                     embeds: [{
                         image: { url: randomImage[0].url },
-                        color: FF80B7
+                        color: 0xFF80B7
                     }]
                 });
             } else {
