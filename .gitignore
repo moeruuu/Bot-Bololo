@@ -29,4 +29,8 @@
 # Executables
 *.exe
 *.out
+node_modules/
+*.log
+.env
+dist/
 *.app

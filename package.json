@@ -1,0 +1,26 @@
+{
+  "name": "bot-bololo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moeruuu/Bot-Bololo.git"
+  },
+  "keywords": [
+    "nanasusu"
+  ],
+  "author": "UyenThy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moeruuu/Bot-Bololo/issues"
+  },
+  "homepage": "https://github.com/moeruuu/Bot-Bololo#readme",
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^16.6.0"
+  }
+}
