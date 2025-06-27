@@ -24,7 +24,10 @@ module.exports.execute = async (interaction) => {
             if (randomImage[0].url.startsWith('https://')) {
                 await interaction.reply({
                     content: 'Á à, con đĩ nào nè',
-                    embeds: [{ image: { url: randomImage[0].url } }]
+                    embeds: [{
+                        image: { url: randomImage[0].url },
+                        color: FF80B7
+                    }]
                 });
             } else {
                 await interaction.reply({ content: 'URL ảnh không hợp lệ!', ephemeral: true });
