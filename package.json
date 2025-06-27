@@ -21,6 +21,8 @@
   "homepage": "https://github.com/moeruuu/Bot-Bololo#readme",
   "dependencies": {
     "discord.js": "^14.21.0",
-    "dotenv": "^16.6.0"
+    "dotenv": "^16.6.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.1"
   }
 }

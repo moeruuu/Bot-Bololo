@@ -82,7 +82,7 @@ client.on(Events.MessageCreate, async message => {
 		'cl': 'học ngu thích bú cu tài phiệt',
 		'doctor':'Mấy con đũy doctor chơi như l',
 		'gacha': 'Dính vào là dở rồi',
-
+		'kệ': 'Đéo thích kệ thì sao?',
 		
     };
 
