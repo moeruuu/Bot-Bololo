@@ -4,7 +4,13 @@ const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require(
 require('dotenv').config();
 
 // Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ 
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent
+    ] 
+});
 
 // When the client is ready, run this code (only once)
 client.once(Events.ClientReady, async readyClient => {
@@ -56,6 +62,37 @@ client.on(Events.InteractionCreate, async interaction => {
 			await interaction.reply({ content: 'There was an error while executing this command!', flags: MessageFlags.Ephemeral });
 		}
 	}
+});
+
+client.on(Events.MessageCreate, async message => {
+    if (message.author.bot) return;
+
+    const messageContent = message.content.toLowerCase();
+
+    const responses = {  
+        'i love you': 'biến liền cho mẹ',
+        'vh': 'đôi mình chuột sấm sex'
+    };
+
+	if (message.mentions.has(client.user)) {
+        try {
+            await message.channel.send('Gọi cái loz, đang bận'); 
+        } catch (error) {
+            console.error('Error sending message:', error);
+        }
+    }
+
+	
+    for (const [keyword, response] of Object.entries(responses)) {
+        if (messageContent.includes(keyword)) {
+            try {
+                await message.channel.send(response);
+                break; 
+            } catch (error) {
+                console.error('Error sending message:', error);
+            }
+        }
+    }
 });
 
 console.log(`Loaded ${client.commands.size} commands`);
