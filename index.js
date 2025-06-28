@@ -89,7 +89,7 @@ client.on(Events.MessageCreate, async message => {
     const messageContent = message.content.toLowerCase();
 
     const responses = {  
-        'i love you': 'biến liền cho mẹ',
+        'love': 'biến liền cho mẹ',
         'vh': 'đôi mình chuột sấm sex',
 		'cel': 'đồ chơi thõa mãn',
 		'mie':'đội 2 nón bảo hiểm kệ mẹ kao',
@@ -102,7 +102,14 @@ client.on(Events.MessageCreate, async message => {
 		'doctor':'Mấy con đũy doctor chơi như l',
 		'gacha': 'Dính vào là dở rồi',
 		'kệ': 'Đéo thích kệ thì sao?',
-		
+		'su': 'Mỹ nữ xinh đẹp tuyệt trần chỉ có Susu',
+		'ynl': 'canh khổ qua nội nấu chê đắng\nbước ra đời ngậm đắng nuốt cay',
+		'sợ': 'Cuộc đời t đéo biết sợ là gì',
+		'dở': 'Làm như m hay lắm á',
+		'súc vật': 'Nhắc gì t? Mê t hay gì?',
+		'kem': 'Đợi xíu, đi nấu kem ~',
+		'xin lỗi': 'Tao đéo chấp nhận lời xin lỗi tệ hại này',
+		'chửi': 'Chửi lòi bản họng nó cho tao',
     };
 
 	if (message.mentions.has(client.user)) {
@@ -114,7 +121,8 @@ client.on(Events.MessageCreate, async message => {
 			'Phuyền quá nha con đũy',
 			'G-Gọi tui chi dzạ? B-Baka!!!',
 			'Kick ra server bây giờ',
-			'Cho tui đồ chơi thõa mãn ddiii ~'
+			'Cho tui đồ chơi thõa mãn ddiii ~',
+			'Nín mỏ chó lại',
         	];
 			const randomResponse = mention_responses[Math.floor(Math.random() * mention_responses.length)];
             await message.channel.send(randomResponse); 
