@@ -91,7 +91,7 @@ client.on(Events.MessageCreate, async message => {
     const responses = {  
         'love': 'biến liền cho mẹ',
         'vh': 'đôi mình chuột sấm sex',
-		'cel': 'đồ chơi thõa mãn',
+		'cel': 'chúng mày lên đây giải thích hộ tao cái ?',
 		'mie':'đội 2 nón bảo hiểm kệ mẹ kao',
 		'iu': 'tôi yêu jungcook',
 		'identity v': 'game bệnh hoạn',
@@ -110,6 +110,15 @@ client.on(Events.MessageCreate, async message => {
 		'kem': 'Đợi xíu, đi nấu kem ~',
 		'xin lỗi': 'Tao đéo chấp nhận lời xin lỗi tệ hại này',
 		'chửi': 'Chửi lòi bản họng nó cho tao',
+		'uy': 'Nhìn mặt qi đũy vãi',
+		'bll': 'Một lũ bênh hoạn',
+		'sủa': 'Lấy cái lí do hãm l nào trên đời set ảnh với tên người khác làm group chat ? Sủa lên cho t coi',
+		'p5': 'Anh Ren đẹp zai số 1 thế giới',
+		'7': 'Anh 707 là chồng chị đẹp Susu',
+		'múi': 'Hãy cho Susu liếm múi đi mè :<',
+		'sếu': 'Gơ phố này đang chơi les với Susu rùi nhé :)))',
+		'grey': 'Ai không nghe nhạc Grey D là con chó',
+		'na': 'Thổi bong bóng bằng lỗ mũi đỉnh đấy bro',
     };
 
 	if (message.mentions.has(client.user)) {
