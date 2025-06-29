@@ -27,7 +27,7 @@ const people = [
     },
     {
         name: "Zeus",
-        response: "Chúc mừng bạn đã chọn Zeus!"
+        response: "Chúc mừng bạn đã chọn Zeus! Thánh đụ của năm"
     },
     {
         name: "Minh Khuồi",
@@ -50,10 +50,6 @@ const people = [
         response: "Chúc mừng bạn đã chọn Jun Bùi nhưng ảnh đang bận lo cho tương lai ảnh rồi (chơi đá)"
     },
     {
-        name: "Minh Phúc",
-        response: "Chúc mừng bạn đã chọn Minh Phúc nhưng ảnh đang bận lo cho tương lai ảnh rồi (nhỏ khác)"
-    },
-    {
         name: "Phúc Trường",
         response: "Chúc mừng bạn đã chọn Phúc Trường! Dù thế nào thì ảnh vẫn iu nhỏ khác (nyc)"
     },
@@ -67,6 +63,20 @@ const people = [
     }
 ];
 
+const image = [
+    'https://i.pinimg.com/474x/52/5b/d5/525bd53a019dded63d73a7fcaa322186.jpg',
+    'https://stickerly.pstatic.net/sticker_pack/GKxNn91GyJYvRhMszE6eOQ/FDXTPM/37/-976607614.png',
+    'https://i.pinimg.com/564x/85/bd/06/85bd06c324ea37c5eadec42c5927c154.jpg',
+    'https://micmictala.wordpress.com/wp-content/uploads/2014/09/ideology-on-love-funny-meme-610x9221.jpg?w=640',
+    'https://i.ytimg.com/vi/uqL8Rk43kP8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC0SqNjE0p32_s70gT7Rg9TffA5kQ',
+    'https://media.tenor.com/gYve5YxIJHYAAAAM/love.gif',
+    'https://sayingimages.com/wp-content/uploads/funny-i-love-you-funny-meme.jpg',
+    'https://images3.memedroid.com/images/UPLOADED204/6266b5e7d9e14.jpeg',
+    'https://i.redd.it/zm6im9lo45w91.jpg',
+    'https://static.boredpanda.com/blog/wp-content/uploads/2018/11/wholesome-loving-relationship-memes-150-5bed968a30965__700.jpg',
+
+]
+
 module.exports.execute = async (interaction) => {
     const shuffled = people.sort(() => 0.5 - Math.random());
     const selectedPeople = shuffled.slice(0, 3);
@@ -78,8 +88,8 @@ module.exports.execute = async (interaction) => {
         .addFields(
             selectedPeople.map(person => ({
                 name: person.name,
-                value: '👉 Nhấn nút bên dưới để chọn ny bạn muốn nhé',
-                inline: false
+                value: ' ',
+                inline: true
             }))
         );
 
@@ -101,13 +111,13 @@ module.exports.execute = async (interaction) => {
 
     const filter = i => i.customId.startsWith('choice') && i.user.id === interaction.user.id;
     const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
-
+    const randomImage = image[Math.floor(Math.random() * image.length)];
     collector.on('collect', async i => {
         const choiceIndex = parseInt(i.customId.replace('choice', '')) - 1;
         const selectedPerson = selectedPeople[choiceIndex];
 
         await i.update({
-            content: selectedPerson.response,
+            content: selectedPerson.response + `\n${randomImage}`,
             embeds: [],
             components: [],
         });
@@ -117,7 +127,7 @@ module.exports.execute = async (interaction) => {
     collector.on('end', collected => {
         if (collected.size === 0) {
             interaction.editReply({
-                content: 'Đéo thể đợi nổi, tự tìm người iu đi má',
+                content: 'Chọn ny mà lề mà lề mề, tự tìm người iu đi má',
                 embeds: [],
                 components: [],
             });
