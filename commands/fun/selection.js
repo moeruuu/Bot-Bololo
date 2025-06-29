@@ -57,7 +57,10 @@ const people = [
         name: "Phúc Trường",
         response: "Chúc mừng bạn đã chọn Phúc Trường! Dù thế nào thì ảnh vẫn iu nhỏ khác (nyc)"
     },
-    
+    {
+        name: "Minh Phúc",
+        response: "Chúc mừng bạn đã chọn Minh Phúc! Trai uit thèm đụ nhưng nếu bạn từ chối thì ảnh bảo: \n'em cần hs với ng tốt hơn'"
+    }
 ];
 
 module.exports = { async execute(interaction, people) {
@@ -71,7 +74,6 @@ module.exports = { async execute(interaction, people) {
             .addFields(
                 selectedPeople.map(person => ({
                     name: person.name,
-                    value: person.description,
                 }))
             );
 
