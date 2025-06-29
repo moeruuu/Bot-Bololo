@@ -60,7 +60,7 @@ const people = [
     {
         name: "Minh Phúc",
         response: "Chúc mừng bạn đã chọn Minh Phúc! Trai uit thèm đụ nhưng nếu bạn từ chối thì ảnh bảo: \n'em cần hs với ng tốt hơn'"
-    }
+    },
 ];
 
 module.exports = { async execute(interaction, people) {

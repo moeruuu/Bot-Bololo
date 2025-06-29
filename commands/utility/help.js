@@ -1,7 +1,7 @@
 
 module.exports.data = {
-    name: "ping",
-    description: "Con cac",
+    name: "help",
+    description: "Cần gì chị giúp cưng?",
     type: 1,
     option: [],
     integration_types: [0],
