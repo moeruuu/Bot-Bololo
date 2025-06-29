@@ -27,7 +27,7 @@ const people = [
     },
     {
         name: "Zeus",
-        response: "Chúc mừng bạn đã chọn Zeus! !"
+        response: "Chúc mừng bạn đã chọn Zeus!"
     },
     {
         name: "Minh Khuồi",
@@ -61,6 +61,10 @@ const people = [
         name: "Minh Phúc",
         response: "Chúc mừng bạn đã chọn Minh Phúc! Trai uit thèm đụ nhưng nếu bạn từ chối thì ảnh bảo: \n'em cần hs với ng tốt hơn'"
     },
+    {
+        name: "Đức Lương",
+        response: "Chúc mừng bạn đã chọn Đức Lương nhưng ảnh bận quẹt tinder gái khác rồi"
+    }
 ];
 
 module.exports.execute = async (interaction) => {
