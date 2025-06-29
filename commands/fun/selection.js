@@ -116,14 +116,18 @@ module.exports.execute = async (interaction) => {
         const choiceIndex = parseInt(i.customId.replace('choice', '')) - 1;
         const selectedPerson = selectedPeople[choiceIndex];
 
+        const responseEmbed = new EmbedBuilder()
+            .setTitle('Chúc đầu bạc trăng long nhé!')
+            .setDescription(selectedPerson.response)
+            .setColor('#ce4040')
+            .setImage(randomImage);
+
         await i.update({
-            content: selectedPerson.response + `\n${randomImage}`,
-            embeds: [],
+            embeds: [responseEmbed],
             components: [],
         });
         collector.stop();
     });
-
     collector.on('end', collected => {
         if (collected.size === 0) {
             interaction.editReply({
