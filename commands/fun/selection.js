@@ -9,13 +9,13 @@ module.exports.data = {
 
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } = require('discord.js');
 const people = [
-    { 
-        name: "Duy Đại", 
-        response: "Chúc mừng bạn đã chọn Duy Đại! Trai y ngày ngủ đêm đi chơi với nhiều em gái!" 
+    {
+        name: "Duy Đại",
+        response: "Chúc mừng bạn đã chọn Duy Đại! Trai y ngày ngủ đêm đi chơi với nhiều em gái!"
     },
-    { 
-        name: "Kim Ngân", 
-        response: "Chúc mừng bạn đã chọn Kim Ngân! Gái qbu, đè ra đòi đụ!" 
+    {
+        name: "Kim Ngân",
+        response: "Chúc mừng bạn đã chọn Kim Ngân! Gái qbu, đè ra đòi đụ!"
     },
     {
         name: "Đình Duy",
@@ -63,59 +63,58 @@ const people = [
     },
 ];
 
-module.exports = { async execute(interaction, people) {
-        const shuffled = people.sort(() => 0.5 - Math.random());
-        const selectedPeople = shuffled.slice(0, 3);
+module.exports.execute = async (interaction) => {
+    const shuffled = people.sort(() => 0.5 - Math.random());
+    const selectedPeople = shuffled.slice(0, 3);
 
-        const embed = new EmbedBuilder()
-            .setTitle('Chọn bạn để iu nè mí mom')
-            .setDescription('Thấy ai hợp lý thì pick nhé')
-            .setColor('#ce4040')
-            .addFields(
-                selectedPeople.map(person => ({
-                    name: person.name,
-                }))
-            );
+    const embed = new EmbedBuilder()
+        .setTitle('Chọn bạn để iu nè mí mom')
+        .setDescription('Thấy ai hợp lý thì pick nhé')
+        .setColor('#ce4040')
+        .addFields(
+            selectedPeople.map(person => ({
+                name: person.name,
+            }))
+        );
 
-        const row = new ActionRowBuilder()
-            .addComponents(
-                selectedPeople.map((person, index) =>
-                    new ButtonBuilder()
-                        .setCustomId(`choice${index + 1}`)
-                        .setLabel(person.name)
-                        .setStyle(ButtonStyle.Primary)
-                        .setEmoji('😊')
-                )
-            );
+    const row = new ActionRowBuilder()
+        .addComponents(
+            selectedPeople.map((person, index) =>
+                new ButtonBuilder()
+                    .setCustomId(`choice${index + 1}`)
+                    .setLabel(person.name)
+                    .setStyle(ButtonStyle.Primary)
+                    .setEmoji('😊')
+            )
+        );
 
-        await interaction.reply({
-            embeds: [embed],
-            components: [row],
+    await interaction.reply({
+        embeds: [embed],
+        components: [row],
+    });
+
+    const filter = i => i.customId.startsWith('choice') && i.user.id === interaction.user.id;
+    const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
+
+    collector.on('collect', async i => {
+        const choiceIndex = parseInt(i.customId.replace('choice', '')) - 1;
+        const selectedPerson = selectedPeople[choiceIndex];
+
+        await i.update({
+            content: selectedPerson.response,
+            embeds: [],
+            components: [],
         });
+        collector.stop();
+    });
 
-        const filter = i => i.customId.startsWith('choice') && i.user.id === interaction.user.id;
-        const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
-
-        collector.on('collect', async i => {
-            const choiceIndex = parseInt(i.customId.replace('choice', '')) - 1;
-            const selectedPerson = selectedPeople[choiceIndex];
-
-            await i.update({
-                content: selectedPerson.response,
+    collector.on('end', collected => {
+        if (collected.size === 0) {
+            interaction.editReply({
+                content: 'Đéo thể đợi nổi, tự tìm người iu đi má',
                 embeds: [],
                 components: [],
             });
-            collector.stop();
-        });
-
-        collector.on('end', collected => {
-            if (collected.size === 0) {
-                interaction.editReply({
-                    content: 'Đéo thể đợi nổi, tự tìm người iu đi má',
-                    embeds: [],
-                    components: [],
-                });
-            }
-        });
-    },
-};
+        }
+    });
+}
