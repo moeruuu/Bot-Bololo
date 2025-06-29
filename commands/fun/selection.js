@@ -78,6 +78,8 @@ module.exports.execute = async (interaction) => {
         .addFields(
             selectedPeople.map(person => ({
                 name: person.name,
+                value: '👉 Nhấn nút bên dưới để chọn ny bạn muốn nhé',
+                inline: false
             }))
         );
 
