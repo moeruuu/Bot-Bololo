@@ -4,9 +4,8 @@ const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require(
 const express = require('express');
 require('dotenv').config();
 
-//Tạo Express server
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 app.get('/', (req, res) => {
     res.json({
@@ -120,7 +119,7 @@ client.on(Events.MessageCreate, async message => {
 		'na': 'Thổi bong bóng bằng lỗ mũi đỉnh đấy bro',
 		'im': 'uk, câm mẹ mồm vào',
 		'locket': 'Qi có dùng locket 0?\nQi kh dùng lockettttt\n(cr cua em de huong chet di duoc)',
-		'kiên': '',
+		'kiên': 'Ăn cơm, ngủ nghỉ đi rồi vào cdvn, anh Kiên cho 200tr nè',
 		'bot': 'Nói gì bé dzợ?',
 		'decode': 'Nhửa nháy nhái nhon nhọc',
 		'bệnh': 'Chữa bệnh md của mày',
@@ -128,7 +127,12 @@ client.on(Events.MessageCreate, async message => {
 		'hentai': 'Vậy tao vẫn đc coi hentai à',
 		'láo': 'Thấy cây kim tiêm xong lưng tao không? Để đút đít mày khi mày láo đấy',
 		'nân': 'Tui mời mila làm QTV hết rồi đó nhưng thay đổi tên gúp hay gì phải báo tui nha. Tui hơi tức vụ con Na đối tên gúp không báo rồi đó',
-		'nứng': 'Tao máu M càng đập càng nứng'
+		'nứng': 'Tao máu M càng đập càng nứng',
+		'i5': 'Kite thì der, cứu thì tẹc rô mà đam mê chơi quá hen',
+		'code': 'Xài chatgpt mà tưởng mình oai lắm',
+		'lgbt': 'LGBT là để yêu thương. Xin đừng lăng mạ hay miệt thị. Sinh ra không được sống với giới tính của mình, không được là chính mình, đã là điều thiệt thòi nhất rồi. Làm ơn, con xin các bậc cha mẹ, đừng rời bỏ chúng con 😥😥😥 Mà hãy để cho con bung lụa. 😄😄😄',
+		'spam': 'Spam hoài tao cho ra khỏi server vĩnh viễn h',
+		
     };
 
 	if (message.mentions.has(client.user)) {
@@ -142,6 +146,10 @@ client.on(Events.MessageCreate, async message => {
 			'Kick ra server bây giờ',
 			'Cho tui đồ chơi thõa mãn ddiii ~',
 			'Nín mỏ chó lại',
+			'Chúng sinh bình đẳng, tao thượng đẳng',
+			'Quá mệc để nói chuyện với lũ súc vật như m',
+			'Cho liếm múi thì ra nói chuyện nè',
+
         	];
 			const randomResponse = mention_responses[Math.floor(Math.random() * mention_responses.length)];
             await message.channel.send(randomResponse); 

@@ -8,6 +8,7 @@ module.exports.data = {
 }
 
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } = require('discord.js');
+const { response } = require('express');
 const people = [
     {
         name: "Duy Đại",
@@ -47,11 +48,11 @@ const people = [
     },
     {
         name: "Jun Bùi",
-        response: "Chúc mừng bạn đã chọn Jun Bùi nhưng ảnh đang bận lo cho tương lai ảnh rồi (chơi đá)"
+        response: "Chúc mừng bạn đã chọn Jun Bùi nhưng ảnh đang bận lo cho tương lai ảnh rồi"
     },
     {
         name: "Phúc Trường",
-        response: "Chúc mừng bạn đã chọn Phúc Trường! Dù thế nào thì ảnh vẫn iu nhỏ khác (nyc)"
+        response: "Chúc mừng bạn đã chọn Phúc Trường! Dù thế nào thì ảnh vẫn iu nhỏ khác (& chơi đá)"
     },
     {
         name: "Minh Phúc",
@@ -60,7 +61,27 @@ const people = [
     {
         name: "Đức Lương",
         response: "Chúc mừng bạn đã chọn Đức Lương nhưng ảnh bận quẹt tinder gái khác rồi"
-    }
+    },
+    {
+        name: "Bảo Huy",
+        response: "Chúc mừng bạn đã chọn Bảo Huy! Stalk bạn cả khi bạn block ảnh"
+    },
+    {
+        name: "Đỗ Duy",
+        response: "Chúc mừng bạn đã chọn Đỗ Duy! Ảnh ghost mẹ bạn rồi, khỏi tìm chi cho mệc"
+    },
+    {
+        name: "Khoa Ng",
+        response: "Chúc mừng bạn đã chọn Khoa Ng nhưng bạn đã đá ảnh vì bạn thấy ảnh quá dốt và chán"
+    },
+    {
+        name: "Ngọc Linh",
+        response: "Chúc mừng bạn đã chọn Ngọc Linh! Bạn đã có thêm một người đóng vai nạn nhân trong chuyện tình cảm"
+    },
+    {
+        name: "Hiểu Linh",
+        response: "Chúc mừng bạn đã chọn Hiểu Linh! Mặc dù cô ấy không thích bạn nhưng bạn cũng không được chọn em khác"
+    },
 ];
 
 const image = [
@@ -117,7 +138,7 @@ module.exports.execute = async (interaction) => {
         const selectedPerson = selectedPeople[choiceIndex];
 
         const responseEmbed = new EmbedBuilder()
-            .setTitle('Chúc đầu bạc trăng long nhé!')
+            .setTitle('Trăm năm hạnh fuck')
             .setDescription(selectedPerson.response)
             .setColor('#ce4040')
             .setImage(randomImage);
