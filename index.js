@@ -132,6 +132,9 @@ client.on(Events.MessageCreate, async message => {
 		'code': 'Xài chatgpt mà tưởng mình oai lắm',
 		'lgbt': 'LGBT là để yêu thương. Xin đừng lăng mạ hay miệt thị. Sinh ra không được sống với giới tính của mình, không được là chính mình, đã là điều thiệt thòi nhất rồi. Làm ơn, con xin các bậc cha mẹ, đừng rời bỏ chúng con 😥😥😥 Mà hãy để cho con bung lụa. 😄😄😄',
 		'spam': 'Spam hoài tao cho ra khỏi server vĩnh viễn h',
+		'idv': 'Trần đời chưa từng thấy clan nào mất dạy như clan Bololo. Họ toàn tạo ra những hành động vô học mà mình nghĩ là bẩm sinh ko phải lây nhiễm từ ai, họ làm ô uế cộng đồng IDV, mình là player IDV thật sự thấy mất mặt vì có 1 clan như vậy tồn tại trong cộng đồng văn minh. Hy vọng ai đó trục xuất hết lũ này để trả lại một cộng đồng fan IDV nguyên vẹn mà ko bị váy bẩn bởi tà ma ngoại đạo 🤗',
+		'group': 'Nay có ai mún Bololo cosplay thành box không có ai ko',
+		'chính': 'Liệu nữ chính bé bỏng của chúng ta sẽ 1 lần rung động với tra nam? Hay cô ấy sẽ chọn mặt trời ấm áp đang ở cạnh an ủi cô ấy?',
 		
     };
 
