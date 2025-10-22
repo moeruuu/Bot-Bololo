@@ -1,4 +1,4 @@
-const quizzes = [
+export const quizzes = [
     {
         question: "Ntmt tốp đè ai tr",
         options: {
@@ -140,5 +140,3 @@ const quizzes = [
         answer: "b"
     }
 ]
-
-module.exports = quizzes;
