@@ -1,4 +1,4 @@
-export const quizzes = [
+exports.quizzes = [
     {
         question: "Ntmt tốp đè ai tr",
         options: {

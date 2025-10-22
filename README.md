@@ -1,6 +1,7 @@
 # Bot-Bololo
 Bololo Bot is a **personal Discord bot** built for fun and experimentation.  
 It includes features such as quizzes, selecting lovers and customizable commands for casual use in private servers.
+We use Vietnamese language and this bot has some inappropriate words
 
 ## Features
 - **Avatar** - Show your avatar in discord
