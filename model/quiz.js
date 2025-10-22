@@ -138,5 +138,195 @@ exports.quizzes = [
             d: "40-2"
         },
         answer: "b"
+    },
+    {
+        question: "Kim Ngân thích Uy nên đã nói gì với Uy?",
+        options: {  
+            a: "\"Thèm chịch Uy\"",
+            b: "\"Nhìn mặt qi đĩ vãi\"",
+            c: "\"Uy ơi, cho Ngân mượn tiền với\"",
+            d: "\"Djtmemay\""
+        }, 
+        answer: "b"
+    },
+    {
+        question: "Uy đi quân sự bị ai đụng chạm?",
+        options: {
+            a: "Huấn luyện viên",
+            b: "Bí Đỏng",
+            c: "Hàng xóm",
+            d: "Uy tự sục"
+        },
+        answer: "c"
+    },
+    {
+        question: "Uy đi quân sự ở tiêu đội nào?",
+        options: {
+            a: "Tiêu đội 18",
+            b: "Tiêu đội 60",
+            c: "Tiêu đội 3",
+            d: "Tiêu đội 36"
+        },
+        answer: "d"
+    },
+    {
+        question: "Hẹn đi chơi, vừa đến nhà mie, lcc nói câu gì đầu tiên?",
+        options: {
+            a: "\"Địt mẹ con lồz su chỉ ra đại học hồng bàng\"",
+            b: "\"Mie ơi, mắc ỉa quá\"",
+            c: "\"Đói quá, make up lẹ lên giùm\"",
+            d: "\"Chào bà nha\""
+        },
+        answer: "a"
+    },
+    {
+        question: "Cel đã khóc vì Su, Ếch, Tệp vào mốc thời gian nào?",
+        options: {
+            a: "Mùa đông năm 2018",
+            b: "Tháng 12/2023 (?)",
+            c: "Mùa thu Hà Nội 2024",
+            d: "Kỉ niệm yêu nhau với Minh Đức"  
+        },
+        answer: "b"
+    },
+    {
+        question: "Tên i5 đã khiến lcc được 1k like trên i5?",
+        options: {
+            a: "Cali-chan",
+            b: "Đụ Ổ Cắm Điện",
+            c: "Enchantixx",
+            d: "Con Cu Thịt"
+        },
+        answer: "d"
+    },
+    {
+        question: "Ai là ng quen trai qua thiên dụ r thất tình xong vào disc khóc?",
+        options: {
+            a: "Cel",
+            b: "Susu",
+            c: "Ho",
+            d: "Tệp"
+        },
+        answer: "b"
+    },
+    {
+        question: "Tên fb thời nổi loạn của Uy?",
+        options: {
+            a: "Áo Lót Của Cụt",
+            b: "Quần Xì Của Su",
+            c: "Cục Cứt Của Cá",
+            d: "Con Cu Của tmnd"
+        },
+        answer: "a"
+    },
+    {
+        question: "Câu nói viral bên Âm Dương Sư của Su?",
+        options: {
+            a: "\"Md, tán văng cu giờ\"",
+            b: "\"Đm thằng này lồn vcl\"",
+            c: "\"Tao sẽ jiet mày\"",
+            d: "\"Hãm loz nín mỏ giùm\""
+        },
+        answer: "a"
+    },
+    {
+        question: "Susu cứu lcc ngu nên bị vh chửi gì?",
+        options: { 
+            a: "Sao m không chết mẹ đi?",
+            b: "Sao m ngu thế hả con kia, hả, hảaaa?",
+            c: "Đm mày đúng là con đũy ngu nhất t từng gặp",
+            d: "Tao ghét mày"
+        },
+        answer: "b"
+    },
+    {
+        question: "wheedling là gì?",
+        options: {
+            a: "Làm nũng",
+            b: "Sự lươn lẹo",
+            c: "Thờ khò khè",
+            d: "Sự dỗ dành"
+        },
+        answer: "c"
+    },
+    {
+        question: "Badge S cao bồi được vh chơi như nào?",
+        options: {
+            a: "Cứu bóng khiến hunter trầm cảm",
+            b: "Juke hunter chạy vòng vòng",
+            c: "Chơi lầy với hunter",
+            d: "Móc người đi cứu khi hunter đang hồi đòn"
+        },
+        answer: "d"
+    },
+    {
+        question: "Main hunter của lcc?",
+        options: {
+            a: "Geisha",
+            b: "Joseph",
+            c: "Tàu điện",
+            d: "Leo" 
+        },
+        answer: "c"
+    },
+    {
+        question: "Ncl muốn đi gì xuống Biên Hòa?",
+        options:{
+            a: "xe hơi",
+            b: "nhảy từ máy bay xuống như jwy",
+            c: "thuê du thuyền",
+            d: "đạp xe"
+        },
+        answer: "d"
+    },
+    {
+        question: "Vh đã làm gì sau khi bảo mn đừng quay nữa?",
+        options: {
+            a: "Chửi thẳng mặt mấy đứa cùng lớp",
+            b: "Bỏ đi không nói gì",
+            c: "Nhảy WAP",
+            d: "Khóc lóc om sòm"
+        },
+        answer: "c"
+    },
+    {
+        question: "ncl chế tên sur nào để bị phốt?",
+        options: {
+            a: "Thằn lằn chim bé",
+            b: "Loz sư",
+            c: "Mồn lèo",
+            d: "Bà già"
+        },
+        answer: "b"
+    },
+    {
+        question: "Ngày 1/5, vh đã viết gì?",
+        options: {
+            a: "\"Chupapi Munyanyo\"",
+            b: "\"Kết tủa mà con ghi sai djtme\"",
+            c: "\"Duma bị bê đê hun\"",
+            d: "\"Ê bê đê cho trái lê được hông dạ?\""
+        },
+        answer: "d"
+    },
+    {
+        question: "Ngày 28/12/2020, vh đã làm gì?",
+        options: {
+            a: "\"Giờ thì em biết phải làm gì, đút chim vào cầu chì...\" ",
+            b: "\"Sáng làm thục nữ dịu hiền, tối làm bê đê\"",
+            c: "\"Hít bóng cười\"",
+            d: "\"Đi đụ xì trây\""
+        },
+        answer: "a"
+    },
+    {
+        question: "Na đã làm gì khi ra phố đi bộ Bùi Viện?",
+        options: {
+            a: "\"Quẩy tung loz\"",
+            b: "\"Nhìn ông kia vừa ngủ mà còn bóng trên mồm\"",
+            c: "\"Vô uống vài ly bia\"",
+            d: "\"Tham gia tiệc nude\""
+        },
+        answer: "b"
     }
 ]

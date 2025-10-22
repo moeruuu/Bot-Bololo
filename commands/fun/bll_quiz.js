@@ -19,7 +19,7 @@ module.exports = {
     const embed = new EmbedBuilder()
       .setTitle("🎯 M có phải thành viên BLL thiệt k?")
       .setDescription(`🧠 **${quiz.question}**\n\nHãy chọn một đáp án bên dưới:`)
-      .setColor("#1a5366");
+      .setColor("#5f81d7");
 
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder().setCustomId("a").setLabel(`A. ${quiz.options.a}`).setStyle(ButtonStyle.Primary),
@@ -48,7 +48,7 @@ module.exports = {
           `🧠 **${quiz.question}**\n\nCưng chọn: **${answer.toUpperCase()}**\n\n${
             isCorrect
               ? "✅ Chính xác rồi! Chúc mừng cưng 🎉"
-              : `❌ Sai rồi! Đáp án đúng là **${quiz.answer.toUpperCase()}**`
+              : `❌ Sai rồi! Biến ra khỏi bll giùm`
           }`
         )
         .setColor(isCorrect ? "#00FF7F" : "#FF6347");
