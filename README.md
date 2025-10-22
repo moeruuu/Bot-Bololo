@@ -6,4 +6,4 @@ It includes features such as quizzes, selecting lovers and customizable commands
 - **Avatar** - Show your avatar in discord
 - **Bololo random** - Show ugly photos of bololo members
 - **Select lovers** - You can choose your ideal lovers (just for fun) 
-- **Bololo quizzes* - Play fun quizzes with multiple-choice questions about Bololo's events
+- **Bololo quizzes** - Play fun quizzes with multiple-choice questions about Bololo's events
